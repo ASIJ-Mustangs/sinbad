@@ -158,7 +158,7 @@ The *Sinbad* library saves all its cache data in a temporary directory area on y
 
 The complete source code for the program developed in this tutorial is available here:
 
-* [Welcome01.java](https://github.com/berry-cs/sinbad/raw/master/tutorials/java/Welcome01.java)
+* [Welcome01.java](https://github.com/ASIJ-Mustangs/sinbad/blob/master/tutorials/java/Welcome01.java)
 
 
 ----
