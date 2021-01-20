@@ -5,7 +5,7 @@ Welcome! This set of tutorials provides an introduction to *Sinbad* - a Java lib
 
 ### Required Java Concepts
 
-* Defining a `main()` (or `setup()` in [Processing](http://processing.org)) function
+* Defining a `main()`method
 * Basic data types - String, int, float
 * Variables
 * Using (i.e. calling) methods
@@ -17,7 +17,7 @@ Welcome! This set of tutorials provides an introduction to *Sinbad* - a Java lib
 
 ### Downloading and Installing *Sinbad*
 
-* Follow the instructions [here](http://berry-cs.github.io/sinbad/install-java).
+* Follow the instructions [here](https://docs.google.com/document/d/1G6uRxCbPvmXRXmdh9HD_7es7TQ1H-ugoFJZN8UZOnkg/edit?usp=sharing).
 
 ### The Basics
 
@@ -32,7 +32,7 @@ There are several steps that may be required for step 1, and there are a variety
 
 ## Getting Started
 
-* Open up a new program file in your Java programming environment and define a `main()` function (or `setup()` in Processing) in your file. 
+* Open up a new program file in your Java programming environment and define a `main()` method. 
 
 * Import the *Sinbad* library by typing:
 
@@ -40,20 +40,13 @@ There are several steps that may be required for step 1, and there are a variety
 
   at the top of your file.
 
-  * If you are using [Processing](http://processing.org), you will need to also always include the following line at the very beginning of the `setup()` function of your sketch:
-
-          void setup() {
-            DataSource.initializeProcessing(this);
-            ...
-          }
-
   It's a good idea at this point to trying running your program at this point, just to make sure that the library is imported with no problems. Of course, your program won't do anything at all yet.
   
 * Alright! So, let's now go through the three basic steps above to get data from the NWS' site. 
 
   1. First, we use the `connect` method to create a DataSource object and assign it to a variable. The `connect` method requires one argument (or, parameter): the URL of the data service. We'll talk more about figuring out URLs later, but for now, let's use `http://weather.gov/xml/current_obs/KATL.xml`, which provides a data feed for current weather conditions at Hartsfield-Jackson International Airport in Atlanta, GA.
 
-     Add the following statement to your `main` method (or `setup` in [Processing](http://processing.org)):
+     Add the following statement to your `main` method:
   
           DataSource ds = DataSource.connect("http://weather.gov/xml/current_obs/KATL.xml");
 
@@ -165,18 +158,14 @@ The *Sinbad* library saves all its cache data in a temporary directory area on y
 
 The complete source code for the program developed in this tutorial is available here:
 
-* [Welcome01.java](https://github.com/berry-cs/sinbad/raw/master/tutorials/java/Welcome01.java) (standard Java version)
-* [Welcome01.pde](https://github.com/berry-cs/sinbad/raw/master/tutorials/java/Welcome01/Welcome01.pde) (Processing sketch)
-
+* [Welcome01.java](https://github.com/berry-cs/sinbad/raw/master/tutorials/java/Welcome01.java)
 
 
 ----
 
 ## Exercises
 
-Here are some extensions to the program above you can try working on. If you are using a Java IDE (editor) like Eclipse, DrJava, or BlueJ, look at the "Java" section. If you are using [Processing](http://processing.org), skip to the section labeled "Processing".
-
-### Java
+Here are some extensions to the program above you can try working on.
 
 1. Extend your program to print out a summary of the current weather conditions ("The weather is partly cloudy.", "The weather is overcast.", etc). You will need to find the appropriate label to use and fetch that data element as a string. (You might need to use the `toLowerCase` method of `String`.)
 
@@ -185,22 +174,4 @@ Here are some extensions to the program above you can try working on. If you are
 1. Create another DataSource object to read weather data for a second location. Print out a message stating which of the two locations is hotter (or colder). 
 
 1. Fetch the wind speed and print out a description based on the [Beaufort Scale](http://en.wikipedia.org/wiki/Beaufort_scale). 
-
-
-
-### Processing
-
-
-1. Extend your program to print out a summary of the current weather conditions ("The weather is partly cloudy.", "The weather is overcast.", etc). You will need to find the appropriate label to use and fetch that data element as a string. (You might need to use the `toLowerCase` method of `String`.)
-
-1. Instead of using `println` statements, modify your program so that it uses `text()` to display information about the weather in the window when your program is run. In general, you must always leave the 
-
-        DataSource.initializeProcessing(this);
-       
-   statement in your `setup()` function, but you can `connect`, `load`, and `fetch` from data sources in `draw()`.
-
-1. By fetching the data elements labeled `icon_url_base` and `icon_url_name`, construct a URL for an image of the current weather conditions. Use that URL with the `loadImage` function of Processing to load and display the image in the window when your program is run.
-
-1. Make your program switch between displaying weather information for two (or more) locations when the mouse is clicked.
  
-
