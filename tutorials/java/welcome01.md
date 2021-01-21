@@ -32,7 +32,7 @@ There are several steps that may be required for step 1, and there are a variety
 
 ## Getting Started
 
-* Open up a new program file in your Java programming environment. Create a new Java file called Welcome01.java and define a `main()` method. 
+* Open jGrasp and create a new Java file called Welcome01.java. Next create a `main()` method inside Welcome01. 
 
 * Import the *Sinbad* library by typing:
 
