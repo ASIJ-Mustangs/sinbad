@@ -1,7 +1,7 @@
 
-# Arrays and Lists of Objects
+# Arrays of Objects
 
-In this tutorial, we'll see how to use the *Sinbad* library to access collections of objects. If you have followed along the [Fetching Objects](welcome02-obj.md) tutorial, there is really not much difference!
+In this tutorial, we'll see how to use the *Sinbad* library to access Arrays of objects. If you have followed along the [Fetching Objects](welcome02-obj.md) tutorial, there is really not much difference!
 
 ### Required Java Concepts
 
@@ -23,9 +23,9 @@ Also, provide the following methods for the class:
 * `getName` (returns the `name`)
 * `isLocatedInState` (returns a boolean, whether the weather station is located in the given state)
 
-With your class definition set (here's my [WeatherStation](WeatherStation.java)), go on to the next section and/or the one after it, depending on whether you want to access an array or an `ArrayList` of data.
+With your class definition set (here's my [WeatherStation](WeatherStation.java)), go on to the next section.
 
-## Fetching WeatherStation Data: Array
+## Fetching WeatherStation Data:
 
 We'll use the following URL to access a list of all weather stations utilized by the NOAA's National Weather Service: [weather.gov/xml/current_obs/index.xml](http://weather.gov/xml/current_obs/index.xml). Connect to and load the data as usual by defining a `DataSource` object and using the `connect` and `load` methods. Then, use the **`fetchArray`** method (instead of just `fetch`) to retrieve an array of data for all the weather stations. Here's what I have:
 
