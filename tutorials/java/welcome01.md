@@ -170,6 +170,14 @@ Here are some extensions to the program above you can try working on.
 1. Extend your program to print out a summary of the current weather conditions ("The weather is partly cloudy.", "The weather is overcast.", etc). You will need to find the appropriate label to use and fetch that data element as a string. (You might need to use the `toLowerCase` method of `String`.)
 
 1. Use a `Scanner` to read in a weather station id from the keyboard and  fetch data about the current conditions at that location.
+   
+   As a reminder, when using Scanner make sure you add the import statement - 'import java.util.Scanner;'
+   
+   Then you need to create a Scanner object, prompt the user, and read in the value:
+   
+           Scanner scan = new Scanner(System.in);
+           System.out.println("Enter a weather station ID: ");
+           String id = scan.next();
 
 1. Create another DataSource object to read weather data for a second location. Print out a message stating which of the two locations is hotter (or colder). 
  
