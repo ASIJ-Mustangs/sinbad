@@ -11,8 +11,7 @@ In this tutorial, we'll cover how you can connect to a data source and retrieve 
 
 A _class_ is a template, or blueprint, for creating _objects_. A class definition specifies _fields_ (pieces of information, or attributes, associated with an object) and _methods_ (functions defining the behavior of objects). An object, generally speaking, is used to represent  information as a compound form of data -- a unit of data made up of smaller, individual pieces (the _fields_).
 
-In the context of the weather data that we introduced in the [first tutorial](welcome01.md), we might be interested in representing and manipulating information about an **observation** -- a compound notion made up of smaller pieces of information, such as the temperature, wind direction, and general description of the weather conditions. To get started, add the following snippet of code to a `main` method (or `setup` in Processing). Don't forget to `import core.data.*;` at the top of your file (and additionally call `DataSource.initializeProcessing(this);` at the beginning of `setup()` in Processing). I'm suffixing the variable names with `1` because later you'll set up another pair of variables to read an observation from a second observation station.
-
+In the context of the weather data that we introduced in the [first tutorial](welcome01.md), we might be interested in representing and manipulating information about an **observation** -- a compound notion made up of smaller pieces of information, such as the temperature, wind direction, and general description of the weather conditions. Create a Java file called Welcome02_Object.java. Then add the following snippet of code to a `main` method. Don't forget to `import core.data.*;` at the top of your file. I'm suffixing the variable names with `1` because later you'll set up another pair of variables to read an observation from a second observation station.
 
     String id1 = "KATL";
     DataSource ds1 = DataSource.connect("http://weather.gov/xml/current_obs/" + id1 + ".xml"); 
@@ -22,7 +21,7 @@ In the context of the weather data that we introduced in the [first tutorial](we
 
 Run your program. You should get a printout of available data labels in the data. Let's assume for the purposes of this tutorial that we are interested in the temperature, wind direction, and general description of the weather conditions. Can you figure out the labels for these pieces of the data?
 
-Before actually fetching the data, let's define a class that the *Sinbad* library will use to create objects for us. Go ahead and define a class named `Observation` with fields for the three pieces of information we are interested in. It doesn't matter what you name your fields, but you must also define a _constructor_ for your class that takes initial values for each field as parameters.
+Before actually fetching the data, let's define a class that the *Sinbad* library will use to create objects for us. Go ahead and define a class named `Observation` with fields for the three pieces of information we are interested in. It doesn't matter what you name your fields, but you must also define a _constructor_ for your class that takes initial values for each field as parameters. Creating a class in this case means to create an Observation.java file. 
 
 Also, define a method named `toString` that returns a result of type `String`. You will have to annotate the header of this method with an additional keyword, `public`, for Java to accept it. We'll see in a minute why the `toString` method of a class is a little special.
 
@@ -58,13 +57,6 @@ So, to sum up, in order to fetch data as an object, we use the `fetch()` method 
         Observation ob1 = ds1.fetch("Observation", "weather", "temp_f", "wind_degrees");    
         System.out.println(id1 + ": " + ob1);
 
-> **Note for BlueJ users**: Instead of putting the name of the class in quotation marks as in the first statement above, you'll need to use alternate syntax for specifying the class to use, which is:
-
->        Observation ob1 = ds1.fetch(Observation.class, "weather", "temp_f", "wind_degrees");    
-
-> Do this in all such cases for the remainder of these tutorials if you are using BlueJ.
-
-
 Add these lines to your program and run it. Note that when you try to concatenate an object like `ob1` to a string (as in the `println` statement), Java uses the `toString` method to create a string representation of the object. That's why we added a `toString()` method to the class definition above. 
 
 You should see a line printed out like:
@@ -86,9 +78,7 @@ Note that you are free to name the fields in your class definition whatever you 
 
 ## Exercises
 
-Here are some extensions to the program above you can try working on. If you are using a Java IDE (editor) like Eclipse, DrJava, or BlueJ, look at the "Java" section. If you are using [Processing](http://processing.org), skip to the section labeled "Processing".
-
-### Java
+Here are some extensions to the program above you can try working on.
 
 1. Define a second station id in your program (`id2`) and use it to fetch data and construct a second `Observation` object. 
 
@@ -96,25 +86,10 @@ Here are some extensions to the program above you can try working on. If you are
 
 3. Modify your `main` method to print out the two observations and report which location is colder. 
 
-
-
-### Processing
-
-1. Add a method to your `Observation` class named `showInfo()`  that uses `text` to display information about the observation in the Processing window.
-
-2. Add a `draw` function to your program that fetches the observation data and displays it in the sketch window (using `showInfo()`) when the program runs. (You should probably move everything except the `DataSource.initializeProcessing` statement from the `setup()` function to `draw()`.)
-
-3. Add a `location` (global) variable to your program that swaps its value between `0` and `1` when the mouse is pressed. Use `location` to toggle the display between weather observations for two different locations. 
-
-
-
-
-
 ----
 
 ## Complete Program Files
 
 The complete source code for the program developed in this tutorial, including a possible solution to the exercises, is available here:
 
-* [Welcome02_Object.java](https://github.com/berry-cs/sinbad/raw/master/tutorials/java/Welcome02_Object.java) (standard Java version)
-* [Welcome02_Object.pde](https://github.com/berry-cs/sinbad/raw/master/tutorials/java/Welcome02_Object/Welcome02_Object.pde) (Processing sketch)
+* [Welcome02_Object.java](https://github.com/ASIJ-Mustangs/sinbad/blob/master/tutorials/java/Welcome02_Object.java)
