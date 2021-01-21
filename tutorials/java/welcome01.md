@@ -172,6 +172,4 @@ Here are some extensions to the program above you can try working on.
 1. Use a `Scanner` to read in a weather station id from the keyboard and  fetch data about the current conditions at that location.
 
 1. Create another DataSource object to read weather data for a second location. Print out a message stating which of the two locations is hotter (or colder). 
-
-1. Fetch the wind speed and print out a description based on the [Beaufort Scale](http://en.wikipedia.org/wiki/Beaufort_scale). 
  
