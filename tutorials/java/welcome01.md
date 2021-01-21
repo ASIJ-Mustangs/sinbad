@@ -171,7 +171,7 @@ Here are some extensions to the program above you can try working on.
 
 1. Use a `Scanner` to read in a weather station id from the keyboard and  fetch data about the current conditions at that location.
    
-   As a reminder, when using Scanner make sure you add the import statement - 'import java.util.Scanner;'
+   As a reminder, when using Scanner make sure you add the import statement - `import java.util.Scanner`;
    
    Then you need to create a Scanner object, prompt the user, and read in the value:
    
