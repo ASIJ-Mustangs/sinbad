@@ -88,7 +88,7 @@ Here are some extensions to the program above you can try working on.
 
 ----
 
-## Complete Program Files
+## Complete Program File
 
 The complete source code for the program developed in this tutorial, including a possible solution to the exercises, is available here:
 
