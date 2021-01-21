@@ -63,7 +63,7 @@ There are several steps that may be required for step 1, and there are a variety
 
        System.out.println("Temperature: " + temp);
 
-* Now run your program. You should see a temperature value printed out that matches what is shown at the URL `http://weather.gov/xml/current_obs/KATL.xml` if you load it in your web browser.
+* Now run your program. You should see a temperature value printed out that matches what is shown at the URL [http://weather.gov/xml/current_obs/KATL.xml](http://weather.gov/xml/current_obs/KATL.xml) if you load it in your web browser.
 
 
 ### Data Elements and Labels
