@@ -44,7 +44,7 @@ There are several steps that may be required for step 1, and there are a variety
   
 * Alright! So, let's now go through the three basic steps above to get data from the NWS' site. 
 
-  1. First, we use the `connect` method to create a DataSource object and assign it to a variable. The `connect` method requires one argument (or, parameter): the URL of the data service. We'll talk more about figuring out URLs later, but for now, let's use `http://weather.gov/xml/current_obs/KATL.xml`, which provides a data feed for current weather conditions at Hartsfield-Jackson International Airport in Atlanta, GA.
+  1. First, we use the `connect` method to create a DataSource object and assign it to a variable. The `connect` method requires one argument (or, parameter): the URL of the data service. We'll talk more about figuring out URLs later, but for now, let's use [http://weather.gov/xml/current_obs/KATL.xml](http://weather.gov/xml/current_obs/KATL.xml), which provides a data feed for current weather conditions at Hartsfield-Jackson International Airport in Atlanta, GA.
 
      Add the following statement to your `main` method:
   
