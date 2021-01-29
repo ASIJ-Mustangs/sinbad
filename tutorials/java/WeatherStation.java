@@ -9,7 +9,7 @@ public class WeatherStation {
    private double lat;
    private double lng;
    
-   WeatherStation(String name, String id, String state, double lat, double lng) {
+   public WeatherStation(String name, String id, String state, double lat, double lng) {
       this.name = name;
       this.id = id;
       this.lat = lat;
