@@ -9,7 +9,7 @@ In this tutorial, we'll see how to use the *Sinbad* library to access Arrays of 
 
 ## Defining a Class
 
-As in the [Fetching Objects](welcome02-obj.md) tutorial, let's define a class that the *Sinbad* library will use to create a collection of objects. Go ahead and define a class named **WeatherStation** that has fields
+As in the [Fetching Objects](welcome02-obj.md) tutorial, let's define a class that the *Sinbad* library will use to create a collection of objects. Go ahead and define a class named **WeatherStation** that has instance variables (remember to make them private):
 
 * *name* (String)
 * *id* (String)
@@ -17,7 +17,11 @@ As in the [Fetching Objects](welcome02-obj.md) tutorial, let's define a class th
 * lat (double)
 * lng (double)
 
-Also, provide the following methods for the class:
+Add the following constructor to the class and assign the parameters to the instance variables:
+
+* `public WeatherStation(String n, String i, String s, double la, double ln)`
+
+Also, provide the following methods for the class (remember to make them public):
 
 * `getId` (returns the `id`)
 * `getName` (returns the `name`)
@@ -26,6 +30,8 @@ Also, provide the following methods for the class:
 With your class definition set (here's my [WeatherStation](WeatherStation.java)), go on to the next section.
 
 ## Fetching WeatherStation Data:
+
+Create a Java file called Welcome03.java. Then add the following snippet of code to a main method. Don't forget to import core.data.*; at the top of your file.
 
 We'll use the following URL to access a list of all weather stations utilized by the NOAA's National Weather Service: [weather.gov/xml/current_obs/index.xml](http://weather.gov/xml/current_obs/index.xml). Connect to and load the data as usual by defining a `DataSource` object and using the `connect` and `load` methods. Then, use the **`fetchArray`** method (instead of just `fetch`) to retrieve an array of data for all the weather stations. Here's what I have:
 
